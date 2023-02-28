@@ -17,6 +17,8 @@ namespace CarWashApi.Models
         public DbSet<Packages> Packages { get; set; }
         public DbSet<Car> Car { get; set; }
         public DbSet<Admin> Admin { get; set; }
+        public DbSet<Orders> Orders { get; set; }
+
 
 
 

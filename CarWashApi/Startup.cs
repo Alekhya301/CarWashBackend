@@ -39,6 +39,7 @@ namespace CarWashApi
             services.AddTransient<IPackage, PackageImp>();
             services.AddTransient<ICar, ICarImp>();
             services.AddTransient<IAdmin, AdminImp>();
+            services.AddTransient<IOrders, OrderImp>();
             services.AddCors(option => option.AddPolicy("MyPolicy", ApplicationBuilder =>
             {
                 ApplicationBuilder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();

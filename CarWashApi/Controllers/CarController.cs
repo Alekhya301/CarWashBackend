@@ -69,7 +69,7 @@ namespace CarWashApi.Controllers
 
         // To Update car
         #region
-        [HttpPut]
+        [HttpPut("{Id}")]
         public async Task<ActionResult> UpdateCar(int Id, Car car)
         {
 

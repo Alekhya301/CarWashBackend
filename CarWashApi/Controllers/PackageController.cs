@@ -55,7 +55,7 @@ namespace CarWashApi.Controllers
         //to add packages 
         #region
         [HttpPost]
-        public async Task<ActionResult<User>> AddPackage(Packages package)
+        public async Task<ActionResult<User>> AddPackage( Packages package)
         {
 
             var add = await _package.Add(package);
@@ -69,7 +69,8 @@ namespace CarWashApi.Controllers
 
         // To Update Package
         #region
-        [HttpPut]
+        
+        [HttpPut("{Id}")]
         public async Task<ActionResult> UpdatePackage(int Id, Packages package)
         {
 

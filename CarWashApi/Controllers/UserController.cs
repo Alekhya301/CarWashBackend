@@ -61,17 +61,17 @@ namespace CarWashApi.Controllers
 
         //get user by Email
         #region
-        [HttpGet("{Email}")]
-        public async Task<ActionResult<User>> GetbyEmail(string Email)
-        {
-            var users = await _user.GetByEmail(Email);
-            if (users == null)
-            {
-                return NotFound();
-            }
+        //[HttpGet("{Email}")]
+        //public async Task<ActionResult<User>> GetbyEmail(string Email)
+        //{
+        //    var users = await _user.GetByEmail(Email);
+        //    if (users == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            return Ok(users);
-        }
+        //    return Ok(users);
+        //}
         #endregion
 
         //Login Method
@@ -138,7 +138,7 @@ namespace CarWashApi.Controllers
 
         // To Update User
         #region
-        [HttpPut]
+        [HttpPut("{Id}")]
         public async Task<ActionResult> UpdateUser(int Id, User user)
         {
 
